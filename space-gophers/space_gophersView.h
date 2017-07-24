@@ -10,4 +10,6 @@
 
 @interface space_gophersView : ScreenSaverView
 
+@property NSImage *gopher;
+
 @end

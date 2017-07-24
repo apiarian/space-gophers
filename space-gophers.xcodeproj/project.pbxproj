@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1FB5BF451F26B0620023E887 /* space_gophersView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FB5BF441F26B0620023E887 /* space_gophersView.h */; };
 		1FB5BF471F26B0620023E887 /* space_gophersView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5BF461F26B0620023E887 /* space_gophersView.m */; };
+		1FB5BF4F1F26B3F60023E887 /* spacegirl-gopher.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB5BF4E1F26B3F60023E887 /* spacegirl-gopher.png */; };
+		1FB5BF511F26B5040023E887 /* drawing-gopher.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB5BF501F26B5040023E887 /* drawing-gopher.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +18,8 @@
 		1FB5BF441F26B0620023E887 /* space_gophersView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = space_gophersView.h; sourceTree = "<group>"; };
 		1FB5BF461F26B0620023E887 /* space_gophersView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = space_gophersView.m; sourceTree = "<group>"; };
 		1FB5BF481F26B0620023E887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FB5BF4E1F26B3F60023E887 /* spacegirl-gopher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spacegirl-gopher.png"; sourceTree = "<group>"; };
+		1FB5BF501F26B5040023E887 /* drawing-gopher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drawing-gopher.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,8 @@
 		1FB5BF431F26B0620023E887 /* space-gophers */ = {
 			isa = PBXGroup;
 			children = (
+				1FB5BF501F26B5040023E887 /* drawing-gopher.png */,
+				1FB5BF4E1F26B3F60023E887 /* spacegirl-gopher.png */,
 				1FB5BF441F26B0620023E887 /* space_gophersView.h */,
 				1FB5BF461F26B0620023E887 /* space_gophersView.m */,
 				1FB5BF481F26B0620023E887 /* Info.plist */,
@@ -125,6 +131,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FB5BF4F1F26B3F60023E887 /* spacegirl-gopher.png in Resources */,
+				1FB5BF511F26B5040023E887 /* drawing-gopher.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,12 +242,14 @@
 		1FB5BF4C1F26B0620023E887 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 986C4Z2SX9;
 				INFOPLIST_FILE = "space-gophers/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.megamicron.space-gophers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Debug;
@@ -247,12 +257,14 @@
 		1FB5BF4D1F26B0620023E887 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 986C4Z2SX9;
 				INFOPLIST_FILE = "space-gophers/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.megamicron.space-gophers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Release;

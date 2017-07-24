@@ -12,10 +12,16 @@
 
 - (instancetype)initWithFrame:(NSRect)frame isPreview:(BOOL)isPreview
 {
+    NSLog(@"gopher init (l)");
     self = [super initWithFrame:frame isPreview:isPreview];
     if (self) {
         [self setAnimationTimeInterval:1/30.0];
     }
+    
+    NSBundle *b = [NSBundle bundleForClass:[self class]];
+    
+    self.gopher = [b imageForResource:@"drawing-gopher.png"];
+
     return self;
 }
 
@@ -31,11 +37,13 @@
 
 - (void)drawRect:(NSRect)rect
 {
-    [super drawRect:rect];
+    NSPoint p = SSRandomPointForSizeWithinRect(self.gopher.size, self.frame);
+    [self.gopher drawAtPoint:p fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1];
 }
 
 - (void)animateOneFrame
 {
+    [self setNeedsDisplay:TRUE];
     return;
 }
 
