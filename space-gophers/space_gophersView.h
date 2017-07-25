@@ -7,9 +7,10 @@
 //
 
 #import <ScreenSaver/ScreenSaver.h>
+#import "SGSimulatedImage.h"
 
 @interface space_gophersView : ScreenSaverView
 
-@property NSImage *gopher;
+@property SGSimulatedImage *gopher;
 
 @end

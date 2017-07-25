@@ -7,21 +7,25 @@
 //
 
 #import "space_gophersView.h"
+#import "SGSimulatedImage.h"
 
 @implementation space_gophersView
 
 - (instancetype)initWithFrame:(NSRect)frame isPreview:(BOOL)isPreview
 {
-    NSLog(@"gopher init (l)");
+    NSLog(@"gopher init (n)");
     self = [super initWithFrame:frame isPreview:isPreview];
     if (self) {
         [self setAnimationTimeInterval:1/30.0];
+        
+        // This bit is important. We can't use [NSBundle mainBundle]
+        NSBundle *b = [NSBundle bundleForClass:[self class]];
+        
+        NSImage *g = [b imageForResource:@"drawing-gopher.png"];
+        
+        self.gopher = [[SGSimulatedImage alloc] initWithImage:g];
     }
     
-    NSBundle *b = [NSBundle bundleForClass:[self class]];
-    
-    self.gopher = [b imageForResource:@"drawing-gopher.png"];
-
     return self;
 }
 
@@ -37,14 +41,12 @@
 
 - (void)drawRect:(NSRect)rect
 {
-    NSPoint p = SSRandomPointForSizeWithinRect(self.gopher.size, self.frame);
-    [self.gopher drawAtPoint:p fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1];
+    return;
 }
 
 - (void)animateOneFrame
 {
-    [self setNeedsDisplay:TRUE];
-    return;
+    [self.gopher drawAtSecond:0 InFrame:self.frame];
 }
 
 - (BOOL)hasConfigureSheet
