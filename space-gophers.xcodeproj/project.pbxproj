@@ -20,6 +20,7 @@
 		1FB5BF481F26B0620023E887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FB5BF4E1F26B3F60023E887 /* spacegirl-gopher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spacegirl-gopher.png"; sourceTree = "<group>"; };
 		1FB5BF501F26B5040023E887 /* drawing-gopher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drawing-gopher.png"; sourceTree = "<group>"; };
+		4C5D80651F27EE6100C35181 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +37,7 @@
 		1FB5BF371F26B0620023E887 = {
 			isa = PBXGroup;
 			children = (
+				4C5D80651F27EE6100C35181 /* README.md */,
 				1FB5BF431F26B0620023E887 /* space-gophers */,
 				1FB5BF421F26B0620023E887 /* Products */,
 			);
@@ -288,6 +290,7 @@
 				1FB5BF4D1F26B0620023E887 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
