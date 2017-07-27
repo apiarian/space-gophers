@@ -11,6 +11,8 @@
 @interface SGSimulatedImage : NSObject
 
     @property NSImage *image;
+    @property NSPoint position;
+    @property double angle;
 
     -(instancetype)initWithImage:(NSImage *)image;
     

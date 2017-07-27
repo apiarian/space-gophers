@@ -24,6 +24,29 @@
         NSImage *g = [b imageForResource:@"drawing-gopher.png"];
         
         self.gopher = [[SGSimulatedImage alloc] initWithImage:g];
+        
+        // Create a starfield image
+        NSImage *s = [[NSImage alloc] initWithSize:frame.size];
+        [s lockFocus];
+        
+        // Fill it with a space-y color
+        [[NSColor colorWithCalibratedRed:0.1 green:0.2 blue:0.2 alpha:1.0] drawSwatchInRect:frame];
+        
+        // Add a bunch of stars
+        for (int i = 0; i < 100; i++) {
+            NSBezierPath* p = [NSBezierPath bezierPathWithOvalInRect:NSMakeRect(
+                                                                                SSRandomFloatBetween(0, frame.size.width),
+                                                                                SSRandomFloatBetween(0, frame.size.height),
+                                                                                4, 4)];
+            [p setLineWidth:2];
+            [[NSColor whiteColor] setStroke];
+            [[NSColor yellowColor] setFill];
+            [p fill];
+            [p stroke];
+        }
+        
+        [s unlockFocus];
+        self.starfield = s;
     }
     
     return self;
@@ -46,7 +69,8 @@
 
 - (void)animateOneFrame
 {
-    [self.gopher drawAtSecond:0 InFrame:self.frame];
+    [self.starfield drawInRect:self.frame];
+    [self.gopher drawAtSecond:[[NSDate date] timeIntervalSinceReferenceDate] InFrame:self.frame];
 }
 
 - (BOOL)hasConfigureSheet
