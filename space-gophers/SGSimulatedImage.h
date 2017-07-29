@@ -10,9 +10,14 @@
 
 @interface SGSimulatedImage : NSObject
 
-    @property NSImage *image;
-    @property NSPoint position;
-    @property double angle;
+@property NSImage *image;
+@property double rTimeScale;
+@property double rScale;
+@property double aScale;
+@property double aPhase;
+@property double rotPhase;
+@property double aDirection;
+
 
     -(instancetype)initWithImage:(NSImage *)image;
     

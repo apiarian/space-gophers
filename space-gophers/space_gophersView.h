@@ -11,7 +11,7 @@
 
 @interface space_gophersView : ScreenSaverView
 
-@property SGSimulatedImage *gopher;
+@property NSArray *gophers;
 @property NSImage *starfield;
 
 @end

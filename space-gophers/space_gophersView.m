@@ -21,9 +21,11 @@
         // This bit is important. We can't use [NSBundle mainBundle]
         NSBundle *b = [NSBundle bundleForClass:[self class]];
         
-        NSImage *g = [b imageForResource:@"drawing-gopher.png"];
-        
-        self.gopher = [[SGSimulatedImage alloc] initWithImage:g];
+        NSMutableArray *gs = [NSMutableArray array];
+        for (NSString *name in @[@"drawing-gopher", @"spacegirl-gopher"]) {
+            [gs addObject:[[SGSimulatedImage alloc] initWithImage:[b imageForResource:name]]];
+        }
+        self.gophers = [NSArray arrayWithArray:gs];
         
         // Create a starfield image
         NSImage *s = [[NSImage alloc] initWithSize:frame.size];
@@ -70,7 +72,9 @@
 - (void)animateOneFrame
 {
     [self.starfield drawInRect:self.frame];
-    [self.gopher drawAtSecond:[[NSDate date] timeIntervalSinceReferenceDate] InFrame:self.frame];
+    for (SGSimulatedImage *gopher in self.gophers) {
+        [gopher drawAtSecond:[[NSDate date] timeIntervalSinceReferenceDate] InFrame:self.frame];
+    }
 }
 
 - (BOOL)hasConfigureSheet
