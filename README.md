@@ -2,7 +2,7 @@
 
 A macOS screensaver inspired GopherCon 2017.
 
-Gopher images from (Ashely McNamara's fantastic collection)[https://github.com/ashleymcnamara/gophers].
+Gopher images from [Ashely McNamara's fantastic collection](https://github.com/ashleymcnamara/gophers).
 
 
 ## Development Notes
