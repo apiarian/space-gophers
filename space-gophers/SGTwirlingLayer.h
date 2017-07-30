@@ -1,5 +1,5 @@
 //
-//  SGSimulatedImage.h
+//  SGTwirlingLayer.h
 //  space-gophers
 //
 //  Created by Al Pasechnik on 7/25/17.
@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
 
-@interface SGSimulatedImage : NSObject
+@interface SGTwirlingLayer : CALayer
 
-@property NSImage *image;
+@property double timeScale;
 @property double rTimeScale;
 @property double rScale;
 @property double aScale;
@@ -18,9 +19,6 @@
 @property double rotPhase;
 @property double aDirection;
 
-
-    -(instancetype)initWithImage:(NSImage *)image;
-    
-    -(void)drawAtSecond:(double)t InFrame:(NSRect)frame;
+-(void)animateAtSecond:(double)t InFrame:(NSRect)frame;
     
 @end

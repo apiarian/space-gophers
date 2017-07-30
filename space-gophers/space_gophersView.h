@@ -7,11 +7,10 @@
 //
 
 #import <ScreenSaver/ScreenSaver.h>
-#import "SGSimulatedImage.h"
+#import "SGTwirlingLayer.h"
 
 @interface space_gophersView : ScreenSaverView
 
 @property NSArray *gophers;
-@property NSImage *starfield;
 
 @end

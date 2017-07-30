@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F1987861F2E6F4300225EF5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1987851F2E6F4300225EF5 /* QuartzCore.framework */; };
 		1FB5BF451F26B0620023E887 /* space_gophersView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FB5BF441F26B0620023E887 /* space_gophersView.h */; };
 		1FB5BF471F26B0620023E887 /* space_gophersView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5BF461F26B0620023E887 /* space_gophersView.m */; };
 		1FB5BF4F1F26B3F60023E887 /* spacegirl-gopher.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB5BF4E1F26B3F60023E887 /* spacegirl-gopher.png */; };
 		1FB5BF511F26B5040023E887 /* drawing-gopher.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB5BF501F26B5040023E887 /* drawing-gopher.png */; };
-		4C5D80681F27F3E700C35181 /* SGSimulatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C5D80661F27F3E700C35181 /* SGSimulatedImage.h */; };
-		4C5D80691F27F3E700C35181 /* SGSimulatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5D80671F27F3E700C35181 /* SGSimulatedImage.m */; };
+		4C5D80681F27F3E700C35181 /* SGTwirlingLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C5D80661F27F3E700C35181 /* SGTwirlingLayer.h */; };
+		4C5D80691F27F3E700C35181 /* SGTwirlingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5D80671F27F3E700C35181 /* SGTwirlingLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F1987851F2E6F4300225EF5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1FB5BF411F26B0620023E887 /* space-gophers.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "space-gophers.saver"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB5BF441F26B0620023E887 /* space_gophersView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = space_gophersView.h; sourceTree = "<group>"; };
 		1FB5BF461F26B0620023E887 /* space_gophersView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = space_gophersView.m; sourceTree = "<group>"; };
@@ -23,8 +25,8 @@
 		1FB5BF4E1F26B3F60023E887 /* spacegirl-gopher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spacegirl-gopher.png"; sourceTree = "<group>"; };
 		1FB5BF501F26B5040023E887 /* drawing-gopher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drawing-gopher.png"; sourceTree = "<group>"; };
 		4C5D80651F27EE6100C35181 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		4C5D80661F27F3E700C35181 /* SGSimulatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSimulatedImage.h; sourceTree = "<group>"; };
-		4C5D80671F27F3E700C35181 /* SGSimulatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSimulatedImage.m; sourceTree = "<group>"; };
+		4C5D80661F27F3E700C35181 /* SGTwirlingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTwirlingLayer.h; sourceTree = "<group>"; };
+		4C5D80671F27F3E700C35181 /* SGTwirlingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTwirlingLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,18 +34,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F1987861F2E6F4300225EF5 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F1987841F2E6F4300225EF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F1987851F2E6F4300225EF5 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1FB5BF371F26B0620023E887 = {
 			isa = PBXGroup;
 			children = (
 				4C5D80651F27EE6100C35181 /* README.md */,
 				1FB5BF431F26B0620023E887 /* space-gophers */,
 				1FB5BF421F26B0620023E887 /* Products */,
+				1F1987841F2E6F4300225EF5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,8 +74,8 @@
 				1FB5BF4E1F26B3F60023E887 /* spacegirl-gopher.png */,
 				1FB5BF441F26B0620023E887 /* space_gophersView.h */,
 				1FB5BF461F26B0620023E887 /* space_gophersView.m */,
-				4C5D80661F27F3E700C35181 /* SGSimulatedImage.h */,
-				4C5D80671F27F3E700C35181 /* SGSimulatedImage.m */,
+				4C5D80661F27F3E700C35181 /* SGTwirlingLayer.h */,
+				4C5D80671F27F3E700C35181 /* SGTwirlingLayer.m */,
 				1FB5BF481F26B0620023E887 /* Info.plist */,
 			);
 			path = "space-gophers";
@@ -77,7 +89,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FB5BF451F26B0620023E887 /* space_gophersView.h in Headers */,
-				4C5D80681F27F3E700C35181 /* SGSimulatedImage.h in Headers */,
+				4C5D80681F27F3E700C35181 /* SGTwirlingLayer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C5D80691F27F3E700C35181 /* SGSimulatedImage.m in Sources */,
+				4C5D80691F27F3E700C35181 /* SGTwirlingLayer.m in Sources */,
 				1FB5BF471F26B0620023E887 /* space_gophersView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

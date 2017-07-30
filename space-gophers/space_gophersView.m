@@ -7,15 +7,14 @@
 //
 
 #import "space_gophersView.h"
-#import "SGSimulatedImage.h"
+#import "SGTwirlingLayer.h"
 
 @implementation space_gophersView
 
 - (instancetype)initWithFrame:(NSRect)frame isPreview:(BOOL)isPreview
 {
-    NSLog(@"gopher init (n)");
     self = [super initWithFrame:frame isPreview:isPreview];
-    if (self) {
+    if (self) {        
         [self setAnimationTimeInterval:1/30.0];
         
         // This bit is important. We can't use [NSBundle mainBundle]
@@ -23,7 +22,11 @@
         
         NSMutableArray *gs = [NSMutableArray array];
         for (NSString *name in @[@"drawing-gopher", @"spacegirl-gopher"]) {
-            [gs addObject:[[SGSimulatedImage alloc] initWithImage:[b imageForResource:name]]];
+            SGTwirlingLayer* l = [[SGTwirlingLayer alloc] init];
+            NSImage *g = [b imageForResource:name];
+            l.bounds = NSMakeRect(0, 0, g.size.width, g.size.height);
+            l.contents = g;
+            [gs addObject:l];
         }
         self.gophers = [NSArray arrayWithArray:gs];
         
@@ -32,7 +35,7 @@
         [s lockFocus];
         
         // Fill it with a space-y color
-        [[NSColor colorWithCalibratedRed:0.1 green:0.2 blue:0.2 alpha:1.0] drawSwatchInRect:frame];
+        [[NSColor colorWithCalibratedRed:0.05 green:0.1 blue:0.1 alpha:1.0] drawSwatchInRect:frame];
         
         // Add a bunch of stars
         for (int i = 0; i < 100; i++) {
@@ -46,9 +49,25 @@
             [p fill];
             [p stroke];
         }
-        
         [s unlockFocus];
-        self.starfield = s;
+        
+        // create a base starfield layer with the new image
+        CALayer *starfieldLayer = [CALayer layer];
+        starfieldLayer.bounds = self.frame;
+        starfieldLayer.contents = s;
+        
+        // add the gophers as sublayers
+        for (SGTwirlingLayer *g in self.gophers) {
+            [starfieldLayer addSublayer:g];
+        }
+        
+        // Go!
+        
+        [self setLayer:starfieldLayer];
+        
+        [self updateAnimations];
+        
+        [self setWantsLayer:YES];
     }
     
     return self;
@@ -57,6 +76,7 @@
 - (void)startAnimation
 {
     [super startAnimation];
+
 }
 
 - (void)stopAnimation
@@ -66,15 +86,12 @@
 
 - (void)drawRect:(NSRect)rect
 {
-    return;
+    [super drawRect:rect];
 }
 
 - (void)animateOneFrame
 {
-    [self.starfield drawInRect:self.frame];
-    for (SGSimulatedImage *gopher in self.gophers) {
-        [gopher drawAtSecond:[[NSDate date] timeIntervalSinceReferenceDate] InFrame:self.frame];
-    }
+    [self updateAnimations];
 }
 
 - (BOOL)hasConfigureSheet
@@ -85,6 +102,14 @@
 - (NSWindow*)configureSheet
 {
     return nil;
+}
+
+- (void)updateAnimations
+{
+    for (SGTwirlingLayer *gopher in self.gophers) {
+        [gopher animateAtSecond:[[NSDate date] timeIntervalSinceReferenceDate]
+                        InFrame:self.frame];
+    }
 }
 
 @end
