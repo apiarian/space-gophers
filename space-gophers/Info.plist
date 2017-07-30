@@ -19,7 +19,7 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2017 Megamicron. All rights reserved.</string>
+	<string>CC BY-NC-SA 4.0</string>
 	<key>NSPrincipalClass</key>
 	<string>space_gophersView</string>
 </dict>

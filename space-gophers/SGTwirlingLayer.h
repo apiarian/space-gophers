@@ -3,7 +3,7 @@
 //  space-gophers
 //
 //  Created by Al Pasechnik on 7/25/17.
-//  Copyright © 2017 Megamicron. All rights reserved.
+//  CC BY-NC-SA 4.0
 //
 
 #import <Foundation/Foundation.h>
