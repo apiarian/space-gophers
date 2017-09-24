@@ -21,7 +21,7 @@
         NSBundle *b = [NSBundle bundleForClass:[self class]];
         
         NSMutableArray *gs = [NSMutableArray array];
-        for (NSString *name in @[@"drawing-gopher", @"spacegirl-gopher"]) {
+        for (NSString *name in @[@"astro-gopher-1", @"astro-gopher-2", @"astro-gopher-3", @"astro-gopher-4"]) {
             SGTwirlingLayer* l = [[SGTwirlingLayer alloc] init];
             NSImage *g = [b imageForResource:name];
             l.bounds = NSMakeRect(0, 0, g.size.width, g.size.height);
