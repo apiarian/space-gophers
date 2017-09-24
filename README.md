@@ -2,7 +2,12 @@
 
 A macOS screensaver inspired GopherCon 2017.
 
-Gopher images from [Ashely McNamara's fantastic collection](https://github.com/ashleymcnamara/gophers).
+Gopher images from [Ashely McNamara's fantastic collection](https://github.com/ashleymcnamara/gophers). Speficially [this issue](https://github.com/ashleymcnamara/gophers/issues/6).
+
+
+## Installation
+
+Maybe try installing the `space-gophers.saver` file directly? I don't really know enough about the security restrictions of macOS to say if it will work correctly. If not, you can build the screensaver as outlined in the Development Notes section. Pull requests and suggestions on how to make this easier to install are welcome.
 
 
 ## Development Notes
