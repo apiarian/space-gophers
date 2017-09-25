@@ -2,7 +2,7 @@
 
 A macOS screensaver inspired GopherCon 2017.
 
-![Space Gophers Animated Gif](https://github.com/chipironcin/space-gophers/raw/master/images/space_gophers_animated.png)
+![Space Gophers Animated Gif](https://github.com/chipironcin/space-gophers/raw/master/images/space_gophers_animated.gif)
 
 Gopher images from [Ashely McNamara's fantastic collection](https://github.com/ashleymcnamara/gophers). Speficially [this issue](https://github.com/ashleymcnamara/gophers/issues/6).
 
