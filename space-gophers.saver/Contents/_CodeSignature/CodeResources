@@ -20,22 +20,6 @@
 		<data>
 		0VvRobM3AZyNn+TLw+z6GTOBkys=
 		</data>
-		<key>Resources/drawing-gopher.png</key>
-		<data>
-		f1u3tBxX/Trq2E01Kjbu+G06Abo=
-		</data>
-		<key>Resources/drawinggopher.png</key>
-		<data>
-		f1u3tBxX/Trq2E01Kjbu+G06Abo=
-		</data>
-		<key>Resources/spacegirl-gopher.png</key>
-		<data>
-		qPg4+lLvQCCYzN5KuUa0+eRVCO4=
-		</data>
-		<key>Resources/spacegirlgopher.png</key>
-		<data>
-		qPg4+lLvQCCYzN5KuUa0+eRVCO4=
-		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -65,34 +49,6 @@
 			<key>hash2</key>
 			<data>
 			AoBTxOV2sFm/vPKBUusQqB68iUIlavFYol8SzLM5oVM=
-			</data>
-		</dict>
-		<key>Resources/drawing-gopher.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			bqLoLxBC68+K2vaYo2A26gckRUmgLPEyPxSByKWKSBs=
-			</data>
-		</dict>
-		<key>Resources/drawinggopher.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			bqLoLxBC68+K2vaYo2A26gckRUmgLPEyPxSByKWKSBs=
-			</data>
-		</dict>
-		<key>Resources/spacegirl-gopher.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			nZwbq3CY26R2sls6PL678blkZwKKb/rEksV8CatNuHg=
-			</data>
-		</dict>
-		<key>Resources/spacegirlgopher.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			nZwbq3CY26R2sls6PL678blkZwKKb/rEksV8CatNuHg=
 			</data>
 		</dict>
 	</dict>

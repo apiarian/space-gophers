@@ -35,7 +35,7 @@
         [s lockFocus];
         
         // Fill it with a space-y color
-        [[NSColor colorWithCalibratedRed:0.05 green:0.1 blue:0.1 alpha:1.0] drawSwatchInRect:frame];
+        [[NSColor colorWithCalibratedRed:0.05 green:0.1 blue:0.1 alpha:1.0] drawSwatchInRect:NSMakeRect(0, 0, frame.size.width, frame.size.height)];
         
         // Add a bunch of stars
         for (int i = 0; i < 100; i++) {
