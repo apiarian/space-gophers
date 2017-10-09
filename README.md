@@ -9,8 +9,13 @@ Gopher images from [Ashely McNamara's fantastic collection](https://github.com/a
 
 ## Installation
 
-Maybe try installing the `space-gophers.saver` file directly? I don't really know enough about the security restrictions of macOS to say if it will work correctly. If not, you can build the screensaver as outlined in the Development Notes section. Pull requests and suggestions on how to make this easier to install are welcome.
+Due to macOS security restrictions you cannot directly install this if you have Gatekeeper active (it requires this to be signed by a valid developer certificate). However, you can remove the `com.apple.quarantine` attribute to allow installation, like this:
 
+```
+xattr -d "com.apple.quarantine"  space-gophers.saver
+```
+
+If you don't want to do this, you can build the screensaver as outlined in the Development Notes section. Pull requests and suggestions on how to make this easier to install are welcome.
 
 ## Development Notes
 
